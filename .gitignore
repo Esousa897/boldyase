@@ -4,3 +4,13 @@ vendor/
 *.log
 .DS_Store
 .env/
+
+logs/
+sql/
+config/
+.vscode/
+.DS_Store
+Thumbs.db
+*.bak
+.env
+
