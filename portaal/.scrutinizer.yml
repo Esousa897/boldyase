@@ -1,0 +1,79 @@
+build:
+  environment:
+    php:
+      version: 8.1
+    dependencies:
+      before:
+        - composer install
+
+filter:
+  paths:
+    - public/
+    - portaal/
+    - includes/
+  excluded_paths:
+    - assets/
+    - sql/
+    - vendor/
+    - node_modules/
+
+tools:
+  php_code_sniffer:
+    enabled: true
+    config:
+      standard: PSR12
+
+  php_cs_fixer:
+    enabled: true
+    config:
+      level: psr12
+      fixers:
+        - no_unused_imports
+        - phpdoc_align
+        - method_argument_space
+
+  phpstan:
+    enabled: true
+    config:
+      level: 7
+      paths:
+        - public/
+        - portaal/
+        - includes/
+
+  php_cpd: true
+  php_analyzer:
+    enabled: true
+    config:
+      parameter_reference_check: true
+      unused_code_check: true
+      deprecated_code_usage: true
+      verify_property_names: true
+
+  sensiolabs_security_checker: true
+
+checks:
+  php:
+    code_rating: true
+    duplication: true
+
+    variables:
+      unused_variables: true
+      unused_properties: true
+
+    classes:
+      no_goto: true
+      no_global_state: true
+      no_exit: true
+
+    functions:
+      function_length:
+        max_statements: 50
+      parameter_doc_comment_mismatch: true
+
+    security:
+      exposed_debug_info: true
+      no_eval: true
+      no_debug_code: true
+
+    deprecated:
