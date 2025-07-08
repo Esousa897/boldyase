@@ -1,0 +1,52 @@
+#!/bin/bash
+
+# Boldyase Portaal Check Script
+# Controleert alleen mappen/bestanden die nodig zijn (geen node_modules!)
+
+# Essentiële mappen
+REQUIRED_DIRS=("src" "public" "uploads" "logs")
+# Essentiële bestanden
+REQUIRED_FILES=("index.php" "dashboard.php" "config.php" ".env" "composer.json")
+
+echo ""
+echo "┌────────────────────────────────────────┐"
+echo "│     BOLDYASE-PORTAAL MAP CHECK         │"
+echo "└────────────────────────────────────────┘"
+echo ""
+
+MISSING=0
+
+# Check mappen
+for dir in "${REQUIRED_DIRS[@]}"; do
+    if [ -d "$dir" ]; then
+        echo "✔️  Map gevonden:   $dir/"
+    else
+        echo "❌  Map MIST:       $dir/"
+        MISSING=1
+    fi
+done
+
+# Check bestanden
+for file in "${REQUIRED_FILES[@]}"; do
+    if [ -f "$file" ]; then
+        echo "✔️  Bestand gevonden: $file"
+    else
+        echo "❌  Bestand MIST:     $file"
+        MISSING=1
+    fi
+done
+
+# node_modules check (mag ontbreken!)
+if [ -d "node_modules" ]; then
+    echo "ℹ️  Opmerking: node_modules/ bestaat, maar is NIET nodig."
+fi
+
+if [ $MISSING -eq 0 ]; then
+    echo ""
+    echo "✅ ALLES AANWEZIG – Je kunt door!"
+else
+    echo ""
+    echo "⚠️  Let op: Er ontbreken mappen/bestanden. Check je structuur!"
+fi
+
+echo ""

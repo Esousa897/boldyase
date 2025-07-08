@@ -1,0 +1,37 @@
+
+┌───────────────────────────────────────────┐
+│   BOLDYASE | Snapshot oude situatie       │
+└───────────────────────────────────────────┘
+
+Bestanden & mappen in deze directory:
+total 769K
+drwxr-xr-x 1 elton 197609    0 Jul  2 18:11 assets
+drwxr-xr-x 1 elton 197609    0 Jul  5 08:15 config
+drwxr-xr-x 1 elton 197609    0 Jul  4 01:29 includes
+drwxr-xr-x 1 elton 197609    0 Jul  7 03:11 logs
+drwxr-xr-x 1 elton 197609    0 Jul  4 00:33 node_modules
+drwxr-xr-x 1 elton 197609    0 Jul  7 00:39 portaal
+drwxr-xr-x 1 elton 197609    0 Jul  6 23:48 public
+drwxr-xr-x 1 elton 197609    0 Jul  2 18:09 sql
+drwxr-xr-x 1 elton 197609    0 Jul  7 03:11 src
+drwxr-xr-x 1 elton 197609    0 Jul  7 00:39 tests
+drwxr-xr-x 1 elton 197609    0 Jul  3 19:28 uploads
+drwxr-xr-x 1 elton 197609    0 Jul  4 02:07 vendor
+-rw-r--r-- 1 elton 197609    0 Jul  2 18:11 README.md
+-rwxr-xr-x 1 elton 197609 1.4K Jul  7 03:36 boldyase-portaal-check
+-rwxr-xr-x 1 elton 197609  864 Jul  7 03:38 check-oude-situatie.sh
+-rw-r--r-- 1 elton 197609 3.3K Jul  4 02:07 composer.json
+-rw-r--r-- 1 elton 197609  98K Jul  4 02:06 composer.lock
+-rw-r--r-- 1 elton 197609 1.2K Jul  4 01:21 index.js
+-rw-r--r-- 1 elton 197609  29K Jul  5 19:24 package-lock.json
+-rw-r--r-- 1 elton 197609  321 Jul  5 19:24 package.json
+-rw-r--r-- 1 elton 197609  362 Jul  7 03:47 snapshot-voor-wijziging.txt
+-rw-r--r-- 1 elton 197609 558K Jul  4 23:52 structuur.txt
+
+❌  Ontbreekt: index.php
+
+❌  Ontbreekt: dashboard.php
+
+❌  Ontbreekt: config.php
+
+Snapshot klaar. Je kunt deze output bewaren!
