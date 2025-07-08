@@ -1,16 +1,27 @@
+# Node.js
 node_modules/
-uploads/
-vendor/
-*.log
-.DS_Store
-.env/
 
-logs/
-sql/
-config/
-.vscode/
-.DS_Store
-Thumbs.db
-*.bak
+# Composer (PHP)
+vendor/
+
+# Omgevingsvariabelen
 .env
 
+# IDE/OS files
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Logbestanden
+*.log
+logs/
+
+# Database/config
+sql/
+config/
+
+# Uploads/media (optioneel, als je uploads niet wilt delen via Git)
+uploads/
+
+# Backups & overige
+*.bak
